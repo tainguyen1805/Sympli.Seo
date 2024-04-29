@@ -1,0 +1,39 @@
+﻿@model SeoSearchModel; 
+@{
+    ViewData["Title"] = "Home Page";
+    var providers = new List<SelectListItem>
+    {
+        new SelectListItem("Google", "0"),
+        new SelectListItem("Bing", "1")
+    };
+}
+
+<div class="main">
+    <h1 class="display-4">SEO Searcher</h1>
+    @using(@Html.BeginForm(FormMethod.Get))
+    {
+        <div class="row">
+            <span class="label">@Html.LabelFor(p => p.Keywords)</span>
+            <span class="text">@Html.TextBoxFor(p => p.Keywords, new { @readonly = "readonly"})</span>
+        </div>
+        <div class="row">
+            <span class="label">@Html.LabelFor(p => p.TargetSite)</span>
+            <span class="text">@Html.TextBoxFor(p => p.TargetSite, new { @readonly = "readonly" })</span>
+        </div>
+        <div class="row">
+            <span class="label">@Html.LabelFor(p => p.SearchProvider)</span>
+            <span class="text">@Html.DropDownListFor(p => p.SearchProvider, providers, "--Provider--")</span>
+        </div>
+        <div class="btn-submit">
+            <button>Submit</button>
+        </div>
+
+        <div class="row">
+            <span><b>Result:</b></span>
+            <span><i>@ViewData["Result"]</i></span>
+        </div>
+    }
+    
+    
+    
+</div>

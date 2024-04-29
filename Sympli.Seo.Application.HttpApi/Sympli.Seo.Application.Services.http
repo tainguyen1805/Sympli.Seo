@@ -1,0 +1,6 @@
+@Sympli.Seo.Application.Services_HostAddress = http://localhost:5150
+
+GET {{Sympli.Seo.Application.Services_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
