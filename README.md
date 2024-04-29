@@ -8,7 +8,7 @@
 - Google: use HttpClient to fetch HTML
 - Bing: use selenium ChromeDriver to fetch HTML because bing do not allow fetching html directly via a URL using HttpClient (There're some client redirection to see the result on next page)
 
-##Improvements:
+## Improvements:
 - Applying distributed cache if there's a need to deploy mutiple instances
 - Applying Unit testing when I have more time
 - Perfomance: Finding out another ways to grab html as Selenium WebDriver is too slow
